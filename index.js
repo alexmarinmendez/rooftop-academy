@@ -1,6 +1,5 @@
-import check from "./check";
+const utils = require ("./utils.js");
+require('dotenv').config();
 
-let token;
-let blocks;
-
-check(blocks, token);
+const { token } = process.env;
+utils.fetchBlocks(token);
